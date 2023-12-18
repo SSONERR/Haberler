@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABERLER</title>
+    <link rel="icon" href="images/newspaper.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: red;">
+        <div class="container-fluid">
+            <!-- ana ikon -->
+            <a id="anaİkon" class="navbar-brand text-white" href="#"><i class="bi bi-newspaper me-1"></i><b>HABERLER</b></a>
+            <!-- hamburger menü -->
+            <button class="navbar-toggler bg-white border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- diğer ikonlar (ikona basıldığında kelime ile ilgili haberler gelir) -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: small">
+                    <li class="nav-item">
+                        <a id="gündem" class="nav-link active text-white" aria-current="page" href="#"><b>GÜNDEM</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="dünya" class="nav-link active text-white" aria-current="page" href="#"><b>DÜNYA</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ekonomi" class="nav-link active text-white" aria-current="page" href="#"><b>EKONOMİ</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="spor" class="nav-link active text-white" aria-current="page" href="#"><b>SPOR</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="siyaset" class="nav-link active text-white" aria-current="page" href="#"><b>SİYASET</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="bilimvetek" class="nav-link active text-white" aria-current="page" href="#"><b>BİLİM</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="otomotiv" class="nav-link active text-white" aria-current="page" href="#"><b>OTOMOTİV</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="eğitim" class="nav-link active text-white" aria-current="page" href="#"><b>EĞİTİM</b></a>
+                    </li>
+                </ul>
+                <!-- arama kısmı -->
+                <div class="d-flex justify-content-end">
+                    <!-- input -->
+                    <input id="değerİnput" class="form-control border-dark rounded-start-pill fw-bold" type="text"
+                        placeholder="Ne arıyorsun?">
+                        <!-- dil seçeneği -->
+                    <select name="diller" id="diller" class="border-start-0 border-dark ps-2">
+                        <option value="tr">Türkçe</option>
+                        <option value="en">İngilizce</option>
+                        <option value="de">Almanca</option>
+                        <option value="az">Azerice</option>
+                        <option value="cn">Çince</option>
+                        <option value="es">İspanyolca</option>
+                        <option value="ru">Rusça</option>
+                        <option value="jp">Japonca</option>
+                        <option value="it">İtalyanca</option>
+                    </select>
+                    <!-- arama butonu -->
+                    <button id="araButon" class="btn bg-white border-dark col-2 rounded-end-pill border-start-0"
+                        type="button"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ana sayfa -->
+    <div>
+        <!-- kartlar -->
+        <div id="container" class="d-flex justify-content-center flex-wrap">
+
+        </div>
+        <!-- sayfa değişme butonu -->
+        <div class="d-flex justify-content-center m-2">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <!-- sol buton -->
+                <button id="solButon" type="button" class="btn btn-danger"><i
+                        class="bi bi-caret-left-fill"></i></button>
+                <!-- orta kısım -->
+                <button id="ortaButon" type="button" class="btn btn-danger disabled">1</button>
+                <!-- sağ buton -->
+                <button id="sağButon" type="button" class="btn btn-danger"><i
+                        class="bi bi-caret-right-fill"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
